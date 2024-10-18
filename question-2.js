@@ -7,3 +7,7 @@ const students = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+function filterStudents50 (student){
+ return student.filter((checkScore) => checkScore.score > 50).map((addScore) => (addScore.score * 0.1) + addScore.score).reduce((acc,cur) => acc + cur ,0)
+}
+console.log(`Total score is ${filterStudents50(students)}`);

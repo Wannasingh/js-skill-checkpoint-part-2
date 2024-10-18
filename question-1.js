@@ -9,6 +9,12 @@ const techcoolPeople = [
   { name: "Eve", age: 19 },
 ];
 
-const allPeople = [];
+const allPeople = [...techupPeople, ...techcoolPeople];
 
 // เริ่มเขียนโค้ดตรงนี้
+console.log(allPeople);
+function filterEmployee (company) {
+  return company.filter((employees) => employees.age <= 20)
+  .map((employees) => employees)
+}
+console.log(filterEmployee(allPeople))
